@@ -1,0 +1,76 @@
+.header-image {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-top: 50px;
+}
+.header-image-inside {
+  position : relative;
+  background-attachment : fixed;
+  background-position   : top center;
+  background-size       : cover;
+  box-shadow : inset 0 0 1em #111;
+  height : 60vh;
+}
+.header-heading {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  padding: 15vh 10%;
+}
+.header-heading h1 {
+  text-align: center;
+  color: #d11415;
+  font-weight: 900;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3em;
+  line-height: 1.2;
+}
+.header-heading h2 {
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+  font-family: "Playfair Display", serif;
+  font-size: 2em;
+  line-height: 1.2;
+}
+.quick-cook-menu {
+  width: 100%;
+}
+.template-container a {
+  text-decoration: none;
+  color: inherit;
+}
+.image-column {
+  padding: 0;
+  margin: 0;
+}
+.image-column img {
+  width: 100%;
+  height: 400px;
+}
+.content-column {
+  padding: 40px;
+  text-align: center;
+  line-height: 2;
+  height: 400px;
+}
+.content-column h2 {
+  font-family: "Playfair Display", serif;
+  color: #d11415;
+}
+.content-column p {
+  font-size: 1.2em;
+}
+.content-main-container-hover {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  background: transparent;
+  z-index: 1000;
+  transition: all .1s ease-in-out;
+
+}
+.content-main-container:hover > .content-main-container-hover {
+  border: 15px solid rgba(0,0,0,0.3);
+}

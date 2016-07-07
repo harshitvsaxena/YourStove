@@ -1,0 +1,25 @@
+gallery1.jpg - 1920*1200
+gallery2.jpg - 1920*1200
+gallery3.jpg - 1920*1200
+gallery4.jpg - 1920*1200
+gallery5.jpg - 1920*1200
+gallery6.jpg - 1920*1200
+gallery7.jpg - 1920*1200
+gallery8.jpg - 1920*1200
+thumbnail_gallery1.jpg - 500*300
+thumbnail_gallery2.jpg - 500*300
+thumbnail_gallery3.jpg - 500*300
+thumbnail_gallery4.jpg - 500*300
+thumbnail_gallery5.jpg - 500*300
+thumbnail_gallery6.jpg - 500*300
+thumbnail_gallery7.jpg - 500*300
+thumbnail_gallery8.jpg - 500*300
+sticker.jpg - 700*700
+menu1.jpg - 1920*1200 -> menu image
+menu2.jpg - 1920*1200 -> menu image (if required)
+menu3.jpg - 1920*1200 -> menu image (if required)
+thumbnail_menu1.jpg - 500*300
+thumbnail_menu2.jpg - 500*300
+thumbnail_menu3.jpg - 500*300
+meta_image - 700*450 -> image for meta tags
+main_page - 350*400 -> Image shown in eat outs main page
