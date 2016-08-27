@@ -4,8 +4,8 @@ var Routes = require('./config/routes');
 
 /* --- Sentry Integration --- */
 var Raven = require('raven-js');
-var sentryKey = 'SENTRY KEY';
-var sentryApp = 'SENTRY APP ID';
+var sentryKey = '9dcd41cc498c452895266de6b3d7bacd';
+var sentryApp = '94323';
 var sentryUrl = 'https://' + sentryKey + '@app.getsentry.com/' + sentryApp;
 Raven.config(sentryUrl).install();
 /* --- Sentry - End --- */
