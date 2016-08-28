@@ -7,7 +7,7 @@ body {
     height: auto;
     margin: 0;
     padding: 0;
-    background: #f7f7f7;
+    background: #313131;
     padding-left: 250px;
 }
 .content > .container {
@@ -24,4 +24,3 @@ body {
     margin: 0;
     padding: 0;
 }
-

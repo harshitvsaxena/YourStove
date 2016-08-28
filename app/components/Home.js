@@ -2,6 +2,7 @@ var React = require('react');
 
 var ToggleHeader = require('../ui/ToggleHeader');
 var LeftMenu = require('../ui/LeftMenu');
+var Search = require('../ui/Search');
 
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 require('../styles/PageSwitch.css');
@@ -89,11 +90,12 @@ var Home = React.createClass({
                         <div className="row">
                             <div className="col-md-2 col-sm-1 hidden-xs"></div>
                             <div className="col-md-8 col-sm-10 col-xs-12">
+                                <Search />
                                 <ReactCSSTransitionGroup
                                     transitionName="appear"
                                     transitionEnterTimeout={500}
                                     transitionLeaveTimeout={500}>
-                                        {React.cloneElement(this.props.children, {key: this.props.location.pathname})} 
+                                        {React.cloneElement(this.props.children, {key: this.props.location.pathname})}
                                 </ReactCSSTransitionGroup>
                             </div>
                             <div className="col-md-2 col-sm-1 hidden-xs"></div>
@@ -101,8 +103,8 @@ var Home = React.createClass({
                     </div>
                 </section>
             </div>
-        );    
-    }    
+        );
+    }
 });
 
 module.exports = Home;

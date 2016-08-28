@@ -16,8 +16,8 @@ function LeftMenu(props) {
                                 <img src={'./app/img/icon.jpg'} alt='YourStove Logo' />
                             </p>
                             <ul className="header-menu">
-                                <Link to='/home/search'>
-                                    <li className={props.location==='/home/search'?"menuActive":""}>Home</li>
+                                <Link to='/home/timeline'>
+                                    <li className={props.location==='/home/timeline'?"menuActive":""}>Home</li>
                                 </Link>
                                 <Link to='/home/quick-cooks'>
                                     <li className={props.location==='/home/quick-cooks'?"menuActive":""}>Quick Cooks</li>

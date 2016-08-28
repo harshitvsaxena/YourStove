@@ -1,7 +1,5 @@
-.content {
-    background: #313131;
-}
-.search-textarea {
-    background: #fff;
+.search-textbox {
     padding: 30px;
+    border-radius: 0 0 5px 5px;
+    background: #fff;
 }

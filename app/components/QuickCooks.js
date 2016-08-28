@@ -1,9 +1,12 @@
 var React = require('react');
+var Feed = require('../ui/Feed');
 
 var QuickCooks = React.createClass({
     render: function() {
         return (
-            <div>Hello from QuickCooks!</div>
+            <div>
+                <Feed />
+            </div>
         );    
     }    
 });
