@@ -22,10 +22,10 @@ var routes = (
             <IndexRoute component={LandingPage} />
             <Route path='home' component={Home}>
                 <Route path='quick-cooks' header='Quick Cooks' component={QuickCooks} />
-                <Route path='quick-cooks-blog/:quick-cooks' component={QuickCooksBlog} />
+                <Route path='quick-cooks-blog/:quick-cooks' header='Quick Cooks Blog'  component={QuickCooksBlog} />
                 <Route path='eat-outs' header='Eat Outs' component={EatOuts} />
-                <Route path='eat-outs-blog/:eat-outs' component={EatOutsBlog} />
-                <Route path='search' component={Search} />
+                <Route path='eat-outs-blog/:eat-outs' header='Eat Outs Blog' component={EatOutsBlog} />
+                <Route path='search' header='Search' component={Search} />
             </Route>
             <Route path="*" component={Page404} />
         </Route>

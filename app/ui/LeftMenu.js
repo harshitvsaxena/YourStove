@@ -13,14 +13,24 @@ function LeftMenu(props) {
                     <div className="container-fluid">
                         <div id="navbar" className="header-inside">
                             <p className="logo-image">
-                                <img src='' alt='YourStove Logo' />
+                                <img src={'./app/img/icon.jpg'} alt='YourStove Logo' />
                             </p>
                             <ul className="header-menu">
-                                <Link to='/home'><li className="menuActive">Home</li></Link>
-                                <Link to='/home/quick-cooks'><li>Quick Cooks</li></Link>
-                                <Link to='/home/eat-outs'><li>Eat Outs</li></Link>
-                                <Link to='/home/gallery'><li>Gallery</li></Link>
-                                <Link to='/home/about'><li>About</li></Link>
+                                <Link to='/home/search'>
+                                    <li className={props.location==='/home/search'?"menuActive":""}>Home</li>
+                                </Link>
+                                <Link to='/home/quick-cooks'>
+                                    <li className={props.location==='/home/quick-cooks'?"menuActive":""}>Quick Cooks</li>
+                                </Link>
+                                <Link to='/home/eat-outs'>
+                                    <li className={props.location==='/home/eat-outs'?"menuActive":""}>Eat Outs</li>
+                                </Link>
+                                <Link to='/home/gallery'>
+                                    <li className={props.location==='/home/gallery'?"menuActive":""}>Gallery</li>
+                                </Link>
+                                <Link to='/home/about'>
+                                    <li className={props.location==='/home/about'?"menuActive":""}>About</li>
+                                </Link>
                             </ul>
                         </div>
                     </div>
@@ -28,6 +38,10 @@ function LeftMenu(props) {
             </nav>
         </section>
     );
+}
+
+LeftMenu.propTypes = {
+    location: PropTypes.string.isRequired
 }
 
 module.exports = LeftMenu;

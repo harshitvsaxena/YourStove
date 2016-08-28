@@ -1,0 +1,149 @@
+@media (max-width: 768px) {
+    .box-container {
+        width: 250px !important;
+        height: 950px !important;
+        overflow: hidden;
+    }
+    .box-container  .about-movie {
+        display: inline-block !important;
+    }
+    .box-container .about-movie p {
+        width: 49% !important;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.movie-card {
+    font: 14px/22px Arial, sans-serif;
+    color: #A9A8A3;
+    padding: 40px 0;
+}
+.movie-card .box-container {
+    margin: 0 auto;
+    width: 680px;
+    height: 640px;
+    background: #F0F0ED;
+    border-radius: 5px;
+    position: relative;
+}
+.movie-card .box-container a img {
+    max-width: 550px;
+    max-height: 250px;
+}
+.movie-card .box-container .back-cover {
+    height: 342px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.movie-card .box-container .back-cover:before {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("http://laughingsquid.com/wp-content/uploads/bbillo2.jpg");
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: skewY(-3.2deg);
+    transform-origin: 0 0;
+}
+.movie-card .box-container .cover {
+    position: absolute;
+    top: 160px;
+    left: 40px;
+    z-index: 2;
+}
+.movie-card .box-container .cover:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+.movie-card .box-container .details {
+    padding: 238px 0 0 268px;
+}
+.movie-card .box-container .details .title1 {
+    color: #eee;
+    font-size: 44px;
+    margin-bottom: 16px;
+    position: relative;
+}
+.movie-card .box-container .details .title1 span {
+    position: absolute;
+    top: 3px;
+    margin-left: 12px;
+    background: #C4AF3D;
+    border-radius: 5px;
+    color: #544C21;
+    font-size: 14px;
+    padding: 0px 4px;
+}
+.movie-card .box-container .title2 {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.movie-card .box-container .likes {
+    margin-left: 30px;
+    display: inline-block;
+    padding-bottom: 19px;
+}
+.movie-card .box-container .likes:before {
+    content: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/icon_like.png");
+    position: relative;
+    top: 2px;
+    padding-right: 7px;
+}
+.movie-card .box-container .about-movie {
+    display: inline-flex;
+    bottom: 0px;
+    height: 200px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #B1B0AC;
+}
+.movie-card .box-container .about-movie .colum-one {
+    padding-left: 50px;
+    padding-top: 90px;
+    width: 220px;
+    float: left;
+    text-align: left;
+}
+.movie-card .box-container .about-movie .colum-one .colum-catogary {
+    text-align: left;
+    margin-left: -20px;
+}
+.movie-card .box-container .about-movie .colum-one .colum-catogary span {
+    padding: 1px 8px;
+    font-size: 14px;
+    background: white;
+    border-radius: 10px;
+    margin-left: 2px;
+}
+.movie-card .box-container .about-movie .colum-one .colum-catogary span:hover {
+    background: #999;
+    color: white;
+    cursor: pointer;
+}
+
+.movie-card .box-container .about-movie .colum-second {
+    padding-left: 38px;
+    padding-top: 21px;
+    /*margin-left: -39px;*/
+    width: 480px;
+    float: left;
+}
+.movie-card .box-container .about-movie .colum-second p {
+    width: 76%;
+}
+.movie-card .box-container .about-movie .colum-second p a {
+    text-decoration: none;
+    color: #6e6ed8;
+}
+

@@ -3,12 +3,15 @@ var React = require('react');
 var ToggleHeader = require('../ui/ToggleHeader');
 var LeftMenu = require('../ui/LeftMenu');
 
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+require('../styles/PageSwitch.css');
+
 require('../styles/Home.css');
 
 var Home = React.createClass({
     renderJQuery: function() {
 
-        //Logic for toggle navbar
+        //Logic for toggle navbar + side header
         var isClosed;
         var navbarLeftSize = $("#left-menu-navbar").width();
         $(document).ready(function() {
@@ -80,13 +83,18 @@ var Home = React.createClass({
         return (
             <div>
                 <ToggleHeader />
-                <LeftMenu />
+                <LeftMenu location={this.props.location.pathname} />
                 <section className='content'>
                     <div className="container">
                         <div className="row">
                             <div className="col-md-2 col-sm-1 hidden-xs"></div>
                             <div className="col-md-8 col-sm-10 col-xs-12">
-                                {this.props.children}
+                                <ReactCSSTransitionGroup
+                                    transitionName="appear"
+                                    transitionEnterTimeout={500}
+                                    transitionLeaveTimeout={500}>
+                                        {React.cloneElement(this.props.children, {key: this.props.location.pathname})} 
+                                </ReactCSSTransitionGroup>
                             </div>
                             <div className="col-md-2 col-sm-1 hidden-xs"></div>
                         </div>
