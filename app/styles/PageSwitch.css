@@ -1,12 +1,18 @@
 .appear-enter {
-    transition-duration: .7s;
-    transition-style: preserve-3d;
-    transform: rotateY(0deg);
+    opacity: 0.01;
+}
 
-}
 .appear-enter.appear-enter-active {
-    transform: rotateY(180deg);
+    opacity: 1;
+    transition: opacity 500ms ease-in;
 }
+
 .appear-leave {
-    transform: rotateY(0deg);
+    opacity: 1;
+    margin-top: 0px;
+}
+
+.appear-leave.appear-leave-active {
+    opacity: 0.01;
+    transition: opacity 500ms ease-in;
 }

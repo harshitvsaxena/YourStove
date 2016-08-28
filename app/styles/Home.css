@@ -1,0 +1,27 @@
+body {
+    overflow-y: scroll;
+}
+.content {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    padding-left: 250px;
+}
+.content > .container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.content > .container > .row {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.content > .container > .row > div {
+    margin: 0;
+    padding: 0;
+}
+
