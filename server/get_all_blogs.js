@@ -32,7 +32,7 @@ function getAllBlogs(req, res) {
 
             if (connection) {
 
-                r.db(db_config.name()).table('Blogs').pluck('id', 'title', 'label', 'likes','publishDate').run(connection, function(err, cursor) {
+                r.db(db_config.name()).table('Blogs').pluck('id', 'title', 'type', 'label', 'likes', 'publishDate').run(connection, function(err, cursor) {
 
                     if (err) {
 

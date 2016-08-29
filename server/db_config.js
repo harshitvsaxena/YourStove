@@ -19,5 +19,5 @@ function get_db_port() {
 }
 
 function get_db_name() {
-    return 'EdXengine';
+    return 'YourStove';
 }
