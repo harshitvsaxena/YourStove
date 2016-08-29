@@ -5,8 +5,8 @@ var Link = ReactRouter.Link;
 
 function AdminLogin(props) {
     return (
-        <div>
-            Hello from Admin Login UI
+        <div className='container'>
+            <div className='row'></div>
         </div>
     );
 }

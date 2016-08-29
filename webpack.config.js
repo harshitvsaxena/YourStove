@@ -16,6 +16,7 @@ module.exports = {
     module: {
         loaders: [
             {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
+            {test: /datatables\.net.*/, loader: "imports?define=>false"},
             {test: /\.css$/, loader: "style-loader!css-loader"}
         ]
     },
