@@ -1,8 +1,9 @@
 var React = require('react');
+var PropTypes = React.PropTypes;
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
 
-function LandingPage() {
+function LandingPage(props) {
     return (
         <div className="container">
             <div className="row">
@@ -33,6 +34,7 @@ function LandingPage() {
             <div className="row">
                 <div className="col-md-12 col-sm-12 col-xs-12">
                     <h1>Footer</h1>
+                    <Link to='/admin/login'>Admin</Link>
                 </div>
             </div>
         </div>
