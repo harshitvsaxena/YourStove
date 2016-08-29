@@ -23,6 +23,11 @@
   },
   "homepage": "https://github.com/harshitvsaxena/YourStove#readme",
   "dependencies": {
+    "datatables.net": "^1.10.12",
+    "datatables.net-dt": "^1.10.12",
+    "express": "^4.14.0",
+    "http": "0.0.0",
+    "jquery": "^3.1.0",
     "raven-js": "^3.5.1",
     "react": "^15.3.1",
     "react-addons-css-transition-group": "^15.3.1",

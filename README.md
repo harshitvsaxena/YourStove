@@ -51,7 +51,21 @@ App
 |    |-- All the images
 |   
 |-- index.html
+|
 |-- index.js
+|
+|-- webpack.config.js
+|
+|-- .babelrc
+|
+|-- package.json
+|
+|-- server.js
+|
+|-- server
+     |
+     |-- db_config.js
+     |-- get_all_blogs.js
 ```
 
 #### RethinkDB Structure 
@@ -63,9 +77,10 @@ Admins
 |-- password
 |-- id
 
-QuickCooks
+Blogs
 |
 |-- title
+|-- type (quick-cook/eat-out)
 |-- label (Easy/Hard/Moderate) -- or any other label
 |-- shortDescription (For card view)
 |-- category -- ["category1", "category2", "category3"]
@@ -74,18 +89,6 @@ QuickCooks
 |-- coverPic (for card view) -- file save directly here
 |-- profilePic (for card view) -- file saved directly here
 |-- article (the whole article written by admin -- used summernote to generate html in admin view)
-|-- id
-
-EatOuts
-|-- title
-|-- label (Any Label - Veg/Non-veg etc.)
-|-- shortDescription (For Card View)
-|-- category -- ["category1", "category2", "category3"]
-|-- publishDate (timestamp)
-|-- likes
-|-- coverPic (for card view)
-|-- profilePic (for card view)
-|-- article (the whole article written by admin)
 |-- id
 ```
 
