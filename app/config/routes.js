@@ -17,7 +17,7 @@ var EatOutsBlog = require('../components/EatOutsBlog'); /* When someone clicks o
 var Timeline = require('../components/Timeline');
 
 var routes = (
-    <Router history={History}>
+    <Router history={History} onUpdate={() => window.scrollTo(0, 0)}>
         <Route path='/' component={Main}>
             <IndexRoute component={LandingPage} />
             <Route path='home' component={Home}>

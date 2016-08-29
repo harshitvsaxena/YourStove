@@ -1,9 +1,12 @@
 var React = require('react');
+var LandingPageUI = require('../ui/LandingPage'); 
 
 var LandingPage = React.createClass({
     render: function() {
         return (
-            <div>Landing Page</div>
+            <div>
+                <LandingPageUI />
+            </div>
         );
     }
 });

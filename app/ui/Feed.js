@@ -9,10 +9,20 @@ var Link = ReactRouter.Link;
 
 var Card = require('../ui/Card');
 
-function Feed() {
+require('../styles/Feed.css');
+
+function Feed(props) {
+    //Change it - do it using props
+    var dataArray = [0,1,2,3];
     return (
         <div>
-            <Card />
+            <ul>
+                {
+                    dataArray.map(function() {
+                        return <li><Card /></li>
+                    })
+                }
+            </ul>
         </div>
     );
 }

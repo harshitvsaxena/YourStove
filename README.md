@@ -71,8 +71,8 @@ QuickCooks
 |-- category -- ["category1", "category2", "category3"]
 |-- publishDate (timestamp)
 |-- likes
-|-- coverPic (for card view)
-|-- profilePic (for card view)
+|-- coverPic (for card view) -- file save directly here
+|-- profilePic (for card view) -- file saved directly here
 |-- article (the whole article written by admin -- used summernote to generate html in admin view)
 |-- id
 
