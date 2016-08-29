@@ -12,7 +12,7 @@ function AdminList(props) {
                 <div className='col-md-8 col-sm-10 col-xs-12'>
                     <div className='table-responsive'>
                         <br />
-                        <table className='table table-bordered' id='blogs-list'>
+                        <table className='table table-striped' id='blogs-list'>
                             <thead>
                                 <tr>
                                     <th>Title</th>
