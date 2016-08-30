@@ -2,8 +2,16 @@ var React = require('react');
 var PropTypes = React.PropTypes;
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
+var LoadingUI = require('./Loading');
 
 function LandingPage(props) {
+    
+    if(props.isLoading === true) {
+        return (
+            <LoadingUI />
+        );
+    }
+
     return (
         <div className="container">
             <div className="row">
@@ -40,5 +48,9 @@ function LandingPage(props) {
         </div>
     );
 }
+
+LandingPage.propTypes = {
+    isLoading: PropTypes.bool.isRequired
+};
 
 module.exports = LandingPage;

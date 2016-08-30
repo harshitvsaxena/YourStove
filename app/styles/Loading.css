@@ -1,0 +1,19 @@
+.loader {
+    width: 100%;
+    height: 100vh;
+    /*background: #fff;*/
+}
+.loader p {
+    width: 50%;
+    height: 100%;
+    margin-left: 25%;
+    color: #fff;
+    font-size: 3em;
+}
+.loader p img {
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 10px #000000;
+}
+
