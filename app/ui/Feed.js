@@ -6,12 +6,19 @@ var React = require('react');
 var PropTypes = React.PropTypes;
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
+var LoadingBlogUI = require('../ui/LoadingBlog');
 
 var Card = require('../ui/Card');
 
 require('../styles/Feed.css');
 
 function Feed(props) {
+    if(props.isLoading === true) {
+        return (
+            <LoadingBlogUI /> 
+        );
+    }
+
     //Change it - do it using props
     var dataArray = [0,1,2,3];
     return (
@@ -26,6 +33,12 @@ function Feed(props) {
         </div>
     );
 }
+
+Feed.propTypes = {
+    isLoading: PropTypes.bool.isRequired,
+    content: PropTypes.array.isRequired
+
+};
 
 module.exports = Feed;
 

@@ -1,0 +1,16 @@
+.loader-blog {
+    width: 100%;
+    /*background: #fff;*/
+}
+.loader-blog p {
+    width: 20%;
+    margin-left: 40%;
+    color: #fff;
+    font-size: 3em;
+}
+.loader-blog p img {
+    padding-top: 30px;
+    width: 100%;
+    height: auto;
+}
+

@@ -12,24 +12,32 @@ var AdminList = React.createClass({
             url: "http://localhost:8124/get_all_blogs",
             method: "GET",
             success: function(data) {
-                data.data.map(function(currentValue, index, arr) {
-                    $("#blogs-list tbody").append("<tr> \
-                        <td>" + currentValue.title  + "</td> \
-                        <td>" + currentValue.type + "</td> \
-                        <td>" + currentValue.label  + "</td> \
-                        <td>" + currentValue.likes + "</td> \
-                        <td>" + currentValue.publishDate + "</td> \
-                        <td><a style='cursor: pointer;' value='" + currentValue.id + "'>Modify</a></td> \
-                    </tr>");
-               });
-                $('#blogs-list').DataTable({
-                    "order": [4, "desc"]
-                });
-                $("#blogs-list").on('click', 'tbody tr a', function() {
-                    console.log($(this).attr('value'));
-                    //now push it to modify using this.push.state something or <Link to="ideas" params={{ testvalue: "hello" }}>Create Idea</Link>
-                });
- 
+                
+                if (data.status) {
+                    
+                    data.data.map(function(currentValue, index, arr) {
+                        $("#blogs-list tbody").append("<tr> \
+                            <td>" + currentValue.title  + "</td> \
+                            <td>" + currentValue.type + "</td> \
+                            <td>" + currentValue.label  + "</td> \
+                            <td>" + currentValue.likes + "</td> \
+                            <td>" + currentValue.publishDate + "</td> \
+                            <td><a style='cursor: pointer;' value='" + currentValue.id + "'>Modify</a></td> \
+                        </tr>");
+                    });
+                    $('#blogs-list').DataTable({
+                        "order": [4, "desc"]
+                    });
+                    $("#blogs-list").on('click', 'tbody tr a', function() {
+                        console.log($(this).attr('value'));
+                        //now push it to modify using this.push.state something or <Link to="ideas" params={{ testvalue: "hello" }}>Create Idea</Link>
+                    });
+
+                } else {
+                
+                    alert("Error! \n----------\nName: " + data.err.name + "\nMessage: " + data.err.msg + "\n----------\nContact Developer!!!");
+                
+                }
             }
         });
     },
