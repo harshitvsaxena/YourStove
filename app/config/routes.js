@@ -37,10 +37,11 @@ var routes = (
                 <Route path='eat-outs-blog/:eat-outs' header='Eat Outs Blog' component={EatOutsBlog} />
             </Route>
             <Route path='admin' component={Admin}>
-                <Route path='login' header='Admin Login' component={AdminLogin} />
-                <Route path='list' header='Admin List' component={AdminList} />
-                <Route path='add' header='Admin Add' component={AdminAdd} /> 
-                <Route path='modify' header='Admin Modify' component={AdminModify} />
+                <Route path='login' header='Admin Login' component={AdminLogin}>
+                    <Route path='list' header='Admin List' component={AdminList} />
+                    <Route path='add' header='Admin Add' component={AdminAdd} /> 
+                    <Route path='modify' header='Admin Modify' component={AdminModify} />
+                </Route>
             </Route>
             <Route path="*" component={Page404} />
         </Route>

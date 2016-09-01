@@ -7,7 +7,11 @@ require('datatables.net')(window, $);
 require('../../styles/datatables/css/jquery.dataTables.css');
 
 var AdminList = React.createClass({
+    contextTypes: {
+        router: React.PropTypes.object.isRequired
+    },
     loadData: function() {
+        var that = this;
         $.ajax({
             url: "http://localhost:8124/get_all_blogs",
             method: "GET",
@@ -29,13 +33,18 @@ var AdminList = React.createClass({
                         "order": [4, "desc"]
                     });
                     $("#blogs-list").on('click', 'tbody tr a', function() {
-                        console.log($(this).attr('value'));
-                        //now push it to modify using this.push.state something or <Link to="ideas" params={{ testvalue: "hello" }}>Create Idea</Link>
+                        var blogId = $(this).attr('value');
+                        that.context.router.push({
+                            pathname: '/admin/login/modify',
+                            query: {
+                                blogId: blogId
+                            }
+                        });
                     });
 
                 } else {
                 
-                    alert("Error! \n----------\nName: " + data.err.name + "\nMessage: " + data.err.msg + "\n----------\nContact Developer!!!");
+                    alert("Error! \nContact Developer!!!");
                 
                 }
             }

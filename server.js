@@ -1,11 +1,14 @@
 var express = require('express');
 var http = require('http');
 var cors = require('cors');
+var bodyParser = require('body-parser'); 
 
 var app = express();
 
 app.use(express.static('/'));
 app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 var server = http.createServer(app).listen(8124);
 
@@ -28,8 +31,12 @@ app.get('/get_all_quick_cooks', function(req, res) {
 /* -- Admin specific -- */
 /* -- Method POST --*/
 /* -- Will check for admin details also -- */
-/*
-app.get('/add_new_blog', function(req, res) {
+
+app.post('/check_admin', function(req, res) {
+    var checkAdmin = require('./server/check_admin');
+    checkAdmin.result(req, res);
+});
+/*app.get('/add_new_blog', function(req, res) {
     var addNewBlog = require('./server/add_new_blog');
     addNewBlog.result(req, res);
 });

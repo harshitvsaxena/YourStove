@@ -12,11 +12,11 @@ function AdminHeader(props) {
                     <h1>YourStove - Admin Panel</h1>
                     <hr />
                     <ul className='nav nav-tabs'>
-                        <li className={props.location==='/admin/list'?"active":""}>
-                            <Link to='/admin/list'>Browse</Link>
+                        <li className={props.location==='/admin/login/list'?"active":""}>
+                            <Link to='/admin/login/list'>Browse</Link>
                         </li>
-                        <li className={props.location==='/admin/add'?"active":""}>
-                            <Link to='/admin/add'>Write</Link>
+                        <li className={props.location==='/admin/login/add'?"active":""}>
+                            <Link to='/admin/login/add'>Write</Link>
                         </li>
                     </ul> 
                 </div>
