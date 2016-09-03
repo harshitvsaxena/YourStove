@@ -1,0 +1,65 @@
+.navbar {
+    background: #31353d !important;
+    color: #fff !important; 
+}
+.navbar-brand {
+    color: #ff6138 !important;
+}
+.nav li a {
+    color: #fff !important;
+    font-weight: 100;
+}
+.nav li:hover {
+    background: #ff6138 !important;
+}
+#navbar-youtube a i {
+    color: #cc181e;
+}
+
+#navbar-facebook a i {
+    color: #3b5998;
+}
+
+#navbar-instagram a i {
+    color: #bc2a8d;
+}
+
+.navbar-default .navbar-collapse {
+    border-color: #ff6138;
+    text-align: center;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #ff6138 !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background-color: #ff6138 !important;
+}
+
+.navbar-default .navbar-toggle:focus {
+    background-color: #ff6138 !important;
+}
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -10;
+    transform: translateX(-50%) translateY(-50%);
+    background: url({'../videos/teaser.png'}) no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+#content {
+    background: transparent !important;
+}
