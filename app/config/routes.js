@@ -16,7 +16,6 @@ var QuickCooks = require('../components/QuickCooks');
 var QuickCooksBlog = require('../components/QuickCooksBlog'); /*When someone clicks on a particular quick cooks blog*/
 var EatOuts = require('../components/EatOuts');
 var EatOutsBlog = require('../components/EatOutsBlog'); /* When someone clicks on a particular eat outs blog*/
-var Timeline = require('../components/Timeline');
 
 /* -- Admin View -- */
 var Admin = require('../components/admin/Admin');
@@ -30,7 +29,6 @@ var routes = (
         <Route path='/' component={Main}>
             <IndexRoute component={LandingPage} />
             <Route path='home' component={Home}>
-                <Route path='timeline' header='Timeline' component={Timeline} />
                 <Route path='quick-cooks' header='Quick Cooks' component={QuickCooks} />
                 <Route path='quick-cooks-blog/:quick-cooks' header='Quick Cooks Blog'  component={QuickCooksBlog} />
                 <Route path='eat-outs' header='Eat Outs' component={EatOuts} />

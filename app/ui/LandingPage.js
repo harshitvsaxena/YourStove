@@ -17,7 +17,7 @@ function LandingPage(props) {
     return (
         <div>
 
-            <nav className="navbar navbar-default navbar-fixed-bottom">
+            <nav className="landing-page-nav navbar navbar-default navbar-fixed-bottom">
                 <div className="container">
                     <div className="navbar-header">
                         <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -25,28 +25,31 @@ function LandingPage(props) {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <a href="index.html" className="navbar-brand">YourStove</a>
+                        <a href="/" className="navbar-brand">
+                            YourStove
+                            <i className='fa fa-leaf fa-lg' aria-hidden="true"></i>
+                        </a>
                     </div>
                     <div id="navbar" className="navbar-collapse collapse">
                         <ul className="nav navbar-nav">
-                            <li><a href="about">About</a></li>
-                            <li><a href="contact">Contact</a></li>
+                            <li><Link to='/home/about'>About</Link></li>
+                            <li><Link to='/home/contact'>Contact</Link></li>
                             <li><Link to='/admin/login'>Admin</Link></li>
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
                             <li id='navbar-youtube'>
                                 <a href="https://www.youtube.com/channel/UCE2Cuu7x1l5Ag0eZYHu7v-Q" target="_blank">
-                                    <i className="fa fa-youtube-play fa-lg" aria-hidden="true"></i>&nbsp;Youtube
+                                    <i className="fa fa-youtube-play fa-lg" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li id='navbar-facebook'>
                                 <a href="https://www.facebook.com/ystraveldiaries/" target="_blank">
-                                    <i className="fa fa-facebook-official fa-lg" aria-hidden="true"></i>&nbsp;Facebook
+                                    <i className="fa fa-facebook-official fa-lg" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li id='navbar-instagram'>
                                 <a href="https://www.instagram.com/yourstove/" target="_blank">
-                                    <i className="fa fa-instagram fa-lg" aria-hidden="true"></i>&nbsp;Instagram
+                                    <i className="fa fa-instagram fa-lg" aria-hidden="true"></i>
                                 </a>
                             </li>
                         </ul>
@@ -73,20 +76,6 @@ function LandingPage(props) {
                         </Link>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-6 col-sm-6 col-xs-12">
-                        <h1>Newsletter</h1>
-                    </div>
-                    <div className="col-md-6 col-sm-6 col-xs-12">
-                        <h1>Calender</h1>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-12 col-sm-12 col-xs-12">
-                        <h1>Gallery</h1>
-                    </div>
-                </div>
-    
             </div>
 
         </div>

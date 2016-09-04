@@ -31,10 +31,13 @@
     text-align: center;
 }
 
-.logo-image img {
+.logo-image i {
     width: 125px;
     height: 125px;
+    padding: 25px;
+    color: #ff6138;
     border-radius: 100%;
+    border: 1px solid #ddd;
 }
 
 .header-menu {

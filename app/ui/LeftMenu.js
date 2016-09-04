@@ -13,11 +13,11 @@ function LeftMenu(props) {
                     <div className="container-fluid">
                         <div id="navbar" className="header-inside">
                             <p className="logo-image">
-                                <img src={'./app/img/icon.jpg'} alt='YourStove Logo' />
+                                <i className='fa fa-leaf fa-5x' aria-hidden="true"></i>
                             </p>
                             <ul className="header-menu">
-                                <Link to='/home/timeline'>
-                                    <li className={props.location==='/home/timeline'?"menuActive":""}>Home</li>
+                                <Link to='/'>
+                                    <li>Home</li>
                                 </Link>
                                 <Link to='/home/quick-cooks'>
                                     <li className={props.location==='/home/quick-cooks'?"menuActive":""}>Quick Cooks</li>
@@ -30,6 +30,9 @@ function LeftMenu(props) {
                                 </Link>
                                 <Link to='/home/about'>
                                     <li className={props.location==='/home/about'?"menuActive":""}>About</li>
+                                </Link>
+                                <Link to='/home/contact'>
+                                    <li className={props.location==='/home/contact'?"menuActive":""}>Contact</li>
                                 </Link>
                             </ul>
                         </div>

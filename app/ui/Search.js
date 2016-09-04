@@ -8,7 +8,14 @@ require('../styles/Search.css');
 function Search(props) {
     return (
         <div className="search-textbox">
-            <input type='text' className='form-control' placeholder='Search' />
+            <div className="input-group">
+                <input type="text" className="form-control" placeholder="Search for.." />
+                <span className="input-group-btn">
+                    <Link to='/home/search' className="btn btn-warning">
+                        <i className='fa fa-search fa-lg' aria-hidden="true"></i>
+                    </Link>
+                </span>
+            </div>
         </div>
     );
 }
