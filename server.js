@@ -23,12 +23,11 @@ app.get('/get_all_eat_outs', function(req, res) {
     getAllEatOuts.result(req, res);
 });
 
-/*
 app.get('/get_all_quick_cooks', function(req, res) {
     var getAllQuickCooks = require('./server/get_all_quick_cooks');
     getAllQuickCooks.result(req, res);
 });
-*/
+
 /* -- Admin specific -- */
 /* -- Method POST --*/
 /* -- Will check for admin details also -- */

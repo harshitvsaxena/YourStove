@@ -6,7 +6,6 @@ var Link = ReactRouter.Link;
 require('../styles/Card.css');
 
 function Card(props) {
-    console.log(props);
     return (
         <div className="movie-card">
             <div className="box-container">

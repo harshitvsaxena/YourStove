@@ -20,7 +20,6 @@ var EatOuts = React.createClass({
                             isLoading: false,
                             content: data.data
                         });
-                        console.log(that.state.content);
                     } else {
                         alert('There is no blog in our database yet in this category.\nPlease write to us at contact@yourstove.in \nThank you for your support.');
                     }

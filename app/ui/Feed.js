@@ -13,6 +13,7 @@ var Card = require('../ui/Card');
 require('../styles/Feed.css');
 
 function Feed(props) {
+
     if(props.isLoading === true) {
         return (
             <LoadingBlogUI /> 
@@ -36,6 +37,7 @@ function Feed(props) {
             </ul>
         </div>
     );
+
 }
 
 Feed.propTypes = {
