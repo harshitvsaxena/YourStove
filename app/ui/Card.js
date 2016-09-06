@@ -6,34 +6,36 @@ var Link = ReactRouter.Link;
 require('../styles/Card.css');
 
 function Card(props) {
+    console.log(props);
     return (
         <div className="movie-card">
             <div className="box-container">
-                <a href="#">
+                <Link to="#">
                     <img 
                         src={"https://s3-us-west-2.amazonaws.com/s.cdpn.io/454262/MV5BMTQ0ODYzODc0OV5BMl5BanBnXkFtZTgwMDk3OTcyMDE%40._V1_SY1000_CR0%2C0%2C678%2C1000_AL_.jpg"}
                         alt="cover" 
                         className="cover" />
-                </a>
+                </Link>
                 <div className="back-cover">
-                    <img src={'#'} />
+                    <img src={props.content.coverPic} />
                     <div className="details">
-                        <div className="title1">Breaking Bad <span>TV-14</span></div>
-                        <div className="title2"> TV Series (2008–2013) </div>
+                        <div className="title1">{props.content.title} <span>{props.content.label}</span></div>
+                        <div className="title2"> {props.content.publishDate} </div>
                     </div>
                 </div>
                 <div className="about-movie">
                     <div className="colum-one">
-                        <span className="likes">90 likes</span>
+                        <span className="likes">{props.content.likes} likes</span>
                         <div className="colum-catogary">
-                            <span className="tag">Crime</span>
-                            <span className="tag">Drama</span>
-                            <span className="tag">Thriller</span>
+                            <span className="tag">{props.content.category[0]}</span>
+                            <span className="tag">{props.content.category[1]}</span>
+                            <span className="tag">{props.content.category[2]}</span>
                         </div>
                     </div>
                     <div className="colum-second">
                         <p> 
-                            When chemistry teacher Walter White is diagnosed with Stage III cancer and given only two years to live, he decides he has nothing to lose.A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's financial future...<a href="#">read more</a>
+                            {props.content.shortDescription}
+                            &nbsp;<Link to='#'>read more...</Link>
                         </p>
                     </div>
                 </div>
@@ -41,5 +43,9 @@ function Card(props) {
         </div>
     );
 }
+
+Card.propTypes = {
+    content: PropTypes.object.isRequired
+};
 
 module.exports = Card;

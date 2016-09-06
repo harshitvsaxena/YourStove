@@ -9,12 +9,25 @@ var EatOuts = React.createClass({
         };
     },
     componentDidMount: function() {
-        //insert the ajax call to get the feed and arrange it into content
-        //this.state.content = [Something, something];
-        this.state.content[0] = 'Hello';
-        //when loading is done then set the isLoading to false 
-        this.setState({
-            isLoading: false
+        var that = this;
+        $.ajax({
+            url: 'http://localhost:8124/get_all_eat_outs',
+            method: 'GET',
+            success: function(data) {
+                if (data.status) {
+                    if (data.data.length) {
+                        that.setState({
+                            isLoading: false,
+                            content: data.data
+                        });
+                        console.log(that.state.content);
+                    } else {
+                        alert('There is no blog in our database yet in this category.\nPlease write to us at contact@yourstove.in \nThank you for your support.');
+                    }
+                } else {
+                    alert('Please check your connection. And refresh the page.');
+                }
+            }
         });
     },
     render: function() {

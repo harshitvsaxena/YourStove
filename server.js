@@ -17,12 +17,13 @@ app.get('/get_all_blogs', cors(), function(req, res) {
     getAllBlogs.result(req, res);
 });
 
-/*
+
 app.get('/get_all_eat_outs', function(req, res) {
     var getAllEatOuts = require('./server/get_all_eat_outs');
     getAllEatOuts.result(req, res);
 });
 
+/*
 app.get('/get_all_quick_cooks', function(req, res) {
     var getAllQuickCooks = require('./server/get_all_quick_cooks');
     getAllQuickCooks.result(req, res);

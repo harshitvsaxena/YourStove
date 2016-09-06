@@ -19,14 +19,18 @@ function Feed(props) {
         );
     }
 
-    //Change it - do it using props
-    var dataArray = [0,1,2,3];
     return (
         <div>
             <ul>
                 {
-                    dataArray.map(function() {
-                        return <li><Card /></li>
+                    props.content.map(function(currentValue, index, arr) {
+                        return (
+                            <li key={currentValue.id}>
+                                <Card 
+                                    content={currentValue}
+                                />
+                            </li>
+                        );
                     })
                 }
             </ul>
@@ -37,23 +41,6 @@ function Feed(props) {
 Feed.propTypes = {
     isLoading: PropTypes.bool.isRequired,
     content: PropTypes.array.isRequired
-
 };
 
 module.exports = Feed;
-
-/*            <List>
- *             +                {
- *              +                    thousandElements.map(function() {
- *               +                        return <Card 
- *                +                                coverImg={} 
- *                 +                                profileImg={}
- *                  +                                title1={}
- *                   +                                title2={}
- *                    +                                likes={}
- *                     +                                tags={[tag1,tag2,tag3]}
- *                      +                                detailText={}/>
- *                       +                    })
- *                        +                }
- *                         +            </List>
- *                          +*/
