@@ -19,7 +19,7 @@ function Card(props) {
                     <img src={props.content.coverPic} />
                     <div className="details">
                         <div className="title1">{props.content.title} <span>{props.content.label}</span></div>
-                        <div className="title2"> {props.content.publishDate} </div>
+                        <div className="title2">Published On: {props.content.publishDate}</div>
                     </div>
                 </div>
                 <div className="about-movie">
