@@ -2,6 +2,7 @@ var express = require('express');
 var http = require('http');
 var cors = require('cors');
 var bodyParser = require('body-parser'); 
+var multer = require('multer');
 
 var app = express();
 
@@ -36,11 +37,21 @@ app.post('/check_admin', function(req, res) {
     var checkAdmin = require('./server/check_admin');
     checkAdmin.result(req, res);
 });
-/*app.get('/add_new_blog', function(req, res) {
-    var addNewBlog = require('./server/add_new_blog');
-    addNewBlog.result(req, res);
-});
 
+app.post('/add_blog', multer().fields([
+    { name: 'title' },
+    { name: 'type' },
+    { name: 'shortDescription' },
+    { name: 'label' },
+    { name: 'category' },
+    { name: 'article' },
+    { name: 'profilePic', maxCount: 1 }, 
+    { name: 'coverPic', maxCount: 1 }
+]), function(req, res) {
+    var addBlog = require('./server/add_blog');
+    addBlog.result(req, res);
+});
+/*
 app.get('/modify_blog', function(req, res) {
     var modifyBlog = require('./server/modify_blog');
     modifyBlog.result(req, res);

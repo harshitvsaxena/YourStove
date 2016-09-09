@@ -16,7 +16,7 @@ function Card(props) {
                         className="cover" />
                 </Link>
                 <div className="back-cover">
-                    <img src={props.content.coverPic} />
+                    <img src={props.content.profilePic} />
                     <div className="details">
                         <div className="title1">{props.content.title} <span>{props.content.label}</span></div>
                         <div className="title2">Published On: {props.content.publishDate}</div>

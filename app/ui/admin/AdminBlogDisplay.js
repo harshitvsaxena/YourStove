@@ -13,43 +13,44 @@ function AdminBlogDisplay(props) {
                     
                     <hr /> 
                     <h3>Basic Details</h3>
-                    <p>
-                        <br />
-                        Category: 
-                        <select id='blog-type' className='form-control' value={typeof props.type !== 'undefined'?props.type:""}>
-                            <option value=''>-- Select One --</option>
-                            <option value='quick-cook'>Quick Cooks</option>
-                            <option value='eat-out'>Eat Outs</option>
-                        </select>
-                        <br />
-                        Name:
-                        <input id='blog-title' className='form-control' type='text' placeholder="Article Name" />
-                        <br />
-                        Short Description: 
-                        <textarea id='blog-shortDescription' className='form-control' placeholder='Short Description'></textarea>
-                        <br />
-                        Label: 
-                        <input id='blog-label' className='form-control' type="text" placeholder='Label' />
-                        <br />
-                        Categories:
-                        <input id='blog-category-1' className='form-control' type='text' placeholder='Category-1' />
-                        <input id='blog-category-2' className='form-control' type='text' placeholder='Category-2' />
-                        <input id='blog-category-3' className='form-control' type='text' placeholder='Category-3' />
-                        <br />
-                        Profile Pic: 
-                        <input type='file' className='btn btn-default' />
-                        <br />
-                        Cover Pic: 
-                        <input type='file' className='btn btn-default' />
-                    </p>            
+                    <form onSubmit={props.onSubmitBlog} encType="multipart/form-data">
+                        <p>
+                            <br />
+                            Category: 
+                            <select id='blog-type' className='form-control' value={props.type} onChange={props.onUpdateType}>
+                                <option value=''>-- Select One --</option>
+                                <option value='quick-cook'>Quick Cooks</option>
+                                <option value='eat-out'>Eat Outs</option>
+                            </select>
+                            <br />
+                            Name:
+                            <input id='blog-title' className='form-control' type='text' placeholder="Article Name" value={props.title} onChange={props.onUpdateTitle} />
+                            <br />
+                            Short Description: 
+                            <textarea id='blog-shortDescription' className='form-control' placeholder='Short Description' value={props.shortDescription} onChange={props.onUpdateShortDescription} />
+                            <br />
+                            Label: 
+                            <input id='blog-label' className='form-control' type="text" placeholder='Label' value={props.label} onChange={props.onUpdateLabel} />
+                            <br />
+                            Categories:
+                            <input id='blog-category-1' className='form-control' type='text' placeholder='Category-1' value={props.category[0]} onChange={props.onUpdateCategory} />
+                            <input id='blog-category-2' className='form-control' type='text' placeholder='Category-2' value={props.category[1]} onChange={props.onUpdateCategory} />
+                            <input id='blog-category-3' className='form-control' type='text' placeholder='Category-3' value={props.category[2]} onChange={props.onUpdateCategory} />
+                            <br />
+                            Profile Pic: 
+                            <input type='file' className='btn btn-default' name="profilePic" onChange={props.onUpdateProfilePic} />
+                            <br />
+                            Cover Pic: 
+                            <input type='file' className='btn btn-default' name="coverPic" onChange={props.onUpdateCoverPic} />
+                        </p>            
 
-                    <hr />
-                    <h3>Write</h3>
-                    <div className='summernote'>Write here.</div>
-                    
-                    <hr />
-                    <input className='btn btn-lg btn-success' type='button' value='Publish' /> 
-                   
+                        <hr />
+                        <h3>Write</h3>
+                        <div className='summernote'>{((props.article==='undefined')||(props.article===''))?'Write here.':props.article}</div>
+                        <hr />
+                        <input className='btn btn-lg btn-success' type='submit' value='Publish' /> 
+                    </form>
+
                     <hr />
                     <br /><br />
                     
@@ -68,9 +69,17 @@ AdminBlogDisplay.propTypes = {
     label: PropTypes.string,
     category: PropTypes.array,
     article: PropTypes.string,
-    coverPic: PropTypes.string,
-    profilePic: PropTypes.string
-
+    profilePic: PropTypes.object,
+    coverPic: PropTypes.object,
+    onUpdateTitle: PropTypes.func.isRequired,
+    onUpdateType: PropTypes.func.isRequired,
+    onUpdateShortDescription: PropTypes.func.isRequired,
+    onUpdateLabel: PropTypes.func.isRequired,
+    onUpdateCategory: PropTypes.func.isRequired,
+    onUpdateArticle: PropTypes.func.isRequired,
+    onUpdateProfilePic: PropTypes.func.isRequired,
+    onUpdateCoverPic: PropTypes.func.isRequired,
+    onSubmitBlog: PropTypes.func.isRequired
 }
 
 module.exports = AdminBlogDisplay;
